@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHBC Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>DHBC Admin Panel</h1>
+
+<button onclick="showNotice()">Add Notice</button>
+
+<div id="content"></div>
+
+<script>
+
+function showNotice() {
+    document.getElementById("content").innerHTML = `
+        <h2>Add Notice</h2>
+
+        <textarea id="noticeText"
+        rows="5"
+        cols="40"
+        placeholder="Write notice here"></textarea>
+
+        <br><br>
+
+        <button onclick="saveNotice()">
+        Save Notice
+        </button>
+    `;
+}
+
+function saveNotice() {
+
+    let notice =
+    document.getElementById("noticeText").value;
+
+    localStorage.setItem("notice", notice);
+
+    alert("Notice Saved!");
+}
+
+</script>
+
+</body>
+</html>

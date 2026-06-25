@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DHBC Portal</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+         <div class="logo">
+
+    <div class="portal-icon">
+        <i class="fas fa-graduation-cap"></i>
+    </div>
+
+    <div class="logo-text">
+        <h2>DHBC Portal</h2>
+        <p>Academic<br>Management</p>
+    </div>
+
+</div>
+
+<h4 class="section-title">OVERVIEW</h4>
+
+<ul class="menu">
+    <li><a href="#"><i class="fas fa-house"></i> Dashboard</a></li>
+
+
+    <li><a href="#"><i class="fas fa-download"></i> Downloads</a></li>
+
+    <li><a href="#"><i class="fas fa-calendar"></i> My Timetable</a></li>
+
+    <li><a href="#"><i class="fas fa-chart-line"></i> Academic History</a></li>
+
+    <li><a href="#"><i class="fas fa-clipboard-check"></i> My Attendance</a></li>
+
+    <li><a href="#"><i class="fas fa-file-alt"></i> Exam Results</a></li>
+
+    <li><a href="#"><i class="fas fa-id-card"></i> My ID Card</a></li>
+</ul>
+
+<h4 class="section-title">MANAGEMENT</h4>
+
+<ul class="menu">
+    <li><a href="#"><i class="fas fa-shield-alt"></i> Minus System</a></li>
+
+    <li><a href="#"><i class="fas fa-clock"></i> Leave Clearance</a></li>
+</ul>
+
+<h4 class="section-title">SETTINGS</h4>
+
+<ul class="menu">
+    <li><a href="#"><i class="fas fa-cog"></i> Account Settings</a></li>
+</ul>
+<h4 class="section-title">SETTINGS</h4>
+
+<ul class="menu">
+    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+
+    <li>
+        <a href="#" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i>
+          LOGOUT
+        </a>
+    </li>
+</ul>
+
+<div class="student-card">
+
+    <div class="avatar">I</div>
+
+    <div>
+    <h4 id="studentName">Student</h4>
+    <small>Student</small>
+</div>
+
+</div>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <nav class="navbar">
+
+    <div class="search-box">
+        <input type="text" placeholder="Search students...">
+    </div>
+
+    <div class="nav-right">
+
+        <div class="notification">
+    <i class="fas fa-bell"></i>
+    <span class="badge" id="notificationCount">0</span>
+</div>
+<div id="latestNotice"></div>
+
+        <div class="profile">
+
+    <h4 id="welcomeText"></h4>
+
+    <div>
+        <h4 id="topStudentName">Student</h4>
+        <small>Student</small>
+    </div>
+
+</div>
+</nav>
+
+<div class="welcome-card">
+
+    <h4>Good Morning, Irfan 👋</h4>
+
+    <h1>Welcome to DHBC Portal</h1>
+
+    <p>
+        Track your academic journey, manage your selections,
+        and stay up to date.
+    </p>
+
+    <a href="guidebook.html" class="guidebook-btn">
+    Open Guidebook
+</a>
+</div>
+
+<h2 class="section-heading">
+    Quick Access
+    <span class="badge-pill">7 Sections</span>
+
+</h2>
+
+<div class="quick-access">
+
+    <div class="access-card">
+        <div class="icon purple">
+            <i class="fas fa-book"></i>
+        </div>
+        <div class="card-content">
+            <h3>Guidebook</h3>
+            <p>Browse the academic guidebook</p>
+        </div>
+    </div>
+
+    <div class="access-card">
+        <div class="icon violet">
+            <i class="fas fa-calendar"></i>
+        </div>
+        <div class="card-content">
+            <h3>My Timetable</h3>
+            <p>View your weekly class schedule</p>
+        </div>
+    </div>
+
+    <div class="access-card">
+        <div class="icon blue">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="card-content">
+            <h3>Academic History</h3>
+            <p>View your subjects and marks</p>
+        </div>
+    </div>
+
+    <div class="access-card">
+        <div class="icon pink">
+            <i class="fas fa-chart-bar"></i>
+        </div>
+        <div class="card-content">
+            <h3>My Attendance</h3>
+            <p>Track your attendance progress</p>
+        </div>
+    </div>
+
+    <div class="access-card">
+        <div class="icon green">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="card-content">
+            <h3>Exam Results</h3>
+            <p>View your evaluation results</p>
+        </div>
+    </div>
+
+    <div class="access-card">
+        <div class="icon red">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="card-content">
+            <h3>Discipline System</h3>
+            <p>View discipline points</p>
+        </div>
+    </div>
+
+    <div class="access-card">
+        <div class="icon orange">
+            <i class="fas fa-clock"></i>
+        </div>
+        <div class="card-content">
+            <h3>Leave Clearance</h3>
+            <p>Check your leave status</p>
+        </div>
+    </div>
+
+</div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

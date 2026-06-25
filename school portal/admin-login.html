@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHBC Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>DHBC Admin Panel</h1>
+
+<h3>Add Notice</h3>
+
+<textarea id="noticeText"
+placeholder="Write notice here..."
+rows="5"
+cols="50"></textarea>
+
+<br><br>
+
+<button onclick="saveNotice()">
+Save Notice
+</button>
+
+<script>
+
+function saveNotice(){
+
+    const notice =
+    document.getElementById("noticeText").value;
+
+    localStorage.setItem(
+        "notice",
+        notice
+    );
+
+    alert("Notice Saved!");
+
+}
+
+</script>
+
+</body>
+</html>
