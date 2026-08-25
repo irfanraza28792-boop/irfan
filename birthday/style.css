@@ -1,0 +1,1258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #080711;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(125, 48, 130, .35),
+            transparent 48%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(255, 65, 120, .14),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(90, 80, 220, .14),
+            transparent 35%
+        );
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+#backgroundHearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.bg-heart {
+    position: absolute;
+
+    bottom: -30px;
+
+    color: rgba(255, 112, 153, .35);
+
+    animation:
+        floatUp linear infinite;
+}
+
+@keyframes floatUp {
+
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   SLIDES
+========================= */
+
+.slide {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    overflow-y: auto;
+}
+
+.slide.active {
+    display: flex;
+
+    animation:
+        slideIn .65s ease;
+}
+
+@keyframes slideIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(.96)
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.slide-content {
+    width: min(760px, 94%);
+}
+
+.top-label,
+.final-label {
+    color: #d9a0b4;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+.number {
+    color: #b9869d;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size:
+        clamp(55px, 10vw, 100px);
+
+    line-height: .9;
+}
+
+h1 span,
+h2 span {
+    color: #ff5d8a;
+
+    display: block;
+
+    text-shadow:
+        0 0 35px
+        rgba(255, 66, 120, .3);
+}
+
+h2 {
+    font-size:
+        clamp(38px, 7vw, 65px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+p {
+    color: #bbb2c2;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   SLIDE 1
+========================= */
+
+.moon {
+    font-size: 58px;
+
+    margin: 20px 0;
+
+    animation:
+        moonFloat 2.5s infinite;
+}
+
+@keyframes moonFloat {
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(5deg);
+    }
+}
+
+.small-intro {
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-top: 25px;
+
+    font-size: 17px;
+}
+
+.description b {
+    color: white;
+}
+
+.next-btn {
+    margin-top: 30px;
+
+    padding: 15px 28px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff668f,
+            #ff316c
+        );
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 40px
+        rgba(255, 50, 105, .28);
+
+    transition: .25s;
+}
+
+.next-btn:hover {
+    transform:
+        translateY(-4px)
+        scale(1.04);
+
+    box-shadow:
+        0 20px 55px
+        rgba(255, 50, 105, .45);
+}
+
+
+/* =========================
+   SLIDE 2
+========================= */
+
+.cute-heart {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartBeat 1.3s infinite;
+}
+
+@keyframes heartBeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.18);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+}
+
+.message-card {
+    width: min(600px, 100%);
+
+    margin: 25px auto;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.35);
+}
+
+.message-card p {
+    margin-bottom: 15px;
+}
+
+.tiny-heart {
+    color: #ff5d8a;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   SLIDE 3
+========================= */
+
+.flower {
+    font-size: 60px;
+
+    margin-bottom: 10px;
+}
+
+.large-message {
+    margin: 10px auto;
+
+    max-width: 580px;
+
+    font-size: 16px;
+}
+
+.mini-gallery {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.mini-gallery div {
+    width: 120px;
+    height: 145px;
+
+    padding: 6px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.4);
+}
+
+.mini-gallery div:first-child {
+    transform: rotate(-6deg);
+}
+
+.mini-gallery div:last-child {
+    transform: rotate(6deg);
+}
+
+.mini-gallery img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   SLIDE 4 PAYMENT
+========================= */
+
+.lock-icon {
+    font-size: 65px;
+
+    margin-bottom: 10px;
+
+    animation:
+        lockFloat 2s infinite;
+}
+
+@keyframes lockFloat {
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+}
+
+.payment-card {
+    width: min(400px, 100%);
+
+    margin: 30px auto 20px;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.1),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255, 91, 138, .25);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.45);
+}
+
+.payment-top {
+    color: #d9a1b5;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.price {
+    font-size: 65px;
+
+    font-weight: 800;
+
+    margin: 10px 0;
+
+    color: #ff638d;
+}
+
+.payment-text {
+    color: #c5bdc8;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.pay-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5d88,
+            #ff326d
+        );
+
+    color: white;
+
+    font-weight: 800;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.pay-btn:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(255,50,105,.35);
+}
+
+.pay-btn span {
+    margin-left: 10px;
+
+    font-size: 20px;
+}
+
+.upi-note {
+    color: #8e8492;
+
+    font-size: 11px;
+
+    margin-top: 15px;
+}
+
+.payment-status {
+    min-height: 25px;
+
+    color: #ff8eab;
+
+    font-size: 13px;
+}
+
+.demo-btn {
+    margin-top: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #716978;
+
+    cursor: pointer;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   SLIDE 5
+========================= */
+
+.final-content {
+    width: min(850px, 94%);
+}
+
+.firework {
+    color: #ff6b94;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 15px;
+
+    animation:
+        sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+
+    50% {
+        transform: scale(1.15);
+
+        opacity: .65;
+    }
+}
+
+.final h1 {
+    margin-top: 15px;
+}
+
+.final h2 {
+    margin:
+        20px 0 20px;
+
+    color: #efb0c4;
+}
+
+.final-photo {
+    width: 180px;
+    height: 180px;
+
+    margin: 20px auto;
+
+    padding: 7px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff628e,
+            #a875d4,
+            #ff477e
+        );
+
+    box-shadow:
+        0 0 50px
+        rgba(255,70,125,.25);
+}
+
+.final-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.final-card {
+    width: min(650px, 100%);
+
+    margin: 20px auto;
+
+    padding: 28px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+.final-card p {
+    margin-bottom: 15px;
+}
+
+.final-card strong {
+    color: #ff6b93;
+
+    font-size: 18px;
+}
+
+.final-hearts {
+    font-size: 22px;
+
+    margin: 18px;
+
+    animation:
+        heartBeat 1.4s infinite;
+}
+
+.again-btn {
+    padding: 11px 20px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    background:
+        rgba(255,255,255,.05);
+
+    color: #c8c0ca;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .slide {
+        padding: 18px;
+    }
+
+    .message-card {
+        padding: 23px 18px;
+    }
+
+    .mini-gallery div {
+        width: 100px;
+        height: 120px;
+    }
+
+    .payment-card {
+        padding: 25px 20px;
+    }
+
+    .final-card {
+        padding: 23px 18px;
+    }
+
+}
+
+
+
+
+
+/* =========================
+   UPI PAYMENT PANEL
+========================= */
+
+.upi-panel {
+    display: none;
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.8);
+
+    width: min(390px, 90%);
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #25172d,
+            #120e1b
+        );
+
+    border:
+        1px solid
+        rgba(255, 105, 145, .35);
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.7);
+
+    z-index: 10000;
+
+    opacity: 0;
+
+    transition:
+        .3s ease;
+
+    text-align: center;
+}
+
+.upi-panel.show {
+
+    display: block;
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+.upi-close {
+
+    position: absolute;
+
+    right: 18px;
+    top: 12px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color: white;
+
+    font-size: 22px;
+
+    line-height: 28px;
+
+    cursor: pointer;
+}
+
+.upi-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
+}
+
+.upi-panel h3 {
+
+    font-size: 27px;
+
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+.upi-panel p {
+
+    font-size: 13px;
+
+    color: #aaa1af;
+
+    line-height: 1.5;
+}
+
+.qr-box {
+
+    width: 190px;
+    height: 190px;
+
+    margin: 20px auto;
+
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+/*
+   Temporary visual QR.
+   Replace this with a real UPI QR
+   when you connect your payment system.
+*/
+
+.fake-qr {
+
+    width: 160px;
+    height: 160px;
+
+    position: relative;
+
+    background:
+        repeating-conic-gradient(
+            #111 0% 25%,
+            white 0% 50%
+        )
+        50% / 18px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.fake-qr::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 35px;
+
+    background: white;
+
+    border: 8px solid #111;
+}
+
+.fake-qr span {
+
+    position: relative;
+
+    z-index: 2;
+
+    background: white;
+
+    padding: 7px;
+
+    font-weight: 800;
+
+    color: #111;
+
+    border-radius: 5px;
+}
+
+.upi-amount {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #ff638d;
+
+    margin-top: 5px;
+}
+
+.upi-small {
+
+    margin:
+        10px 0 18px;
+}
+
+.unlock-btn {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff638d,
+            #ff326d
+        );
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.unlock-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(255,50,105,.35);
+}
+
+
+
+
+/* =========================================
+   SIMPLE ELEGANT ENTRY
+========================================= */
+
+#entryScreen {
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #24122e 0%,
+            #0d0813 55%,
+            #050309 100%
+        );
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+
+#entryScreen.hide {
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+
+/* CENTER */
+
+.entry-center {
+
+    width: min(500px, 90%);
+
+    text-align: center;
+
+    animation:
+        entryAppear 1.2s ease;
+}
+
+
+/* SMALL LABEL */
+
+.entry-label {
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color:
+        rgba(255,255,255,.4);
+
+    margin-bottom: 35px;
+}
+
+
+/* CIRCLE */
+
+.entry-ring {
+
+    width: 90px;
+    height: 90px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,100,145,.5);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    animation:
+        ringPulse 2.5s ease-in-out infinite;
+}
+
+
+.entry-ring::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+}
+
+
+.entry-dot {
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #ff5d91;
+
+    box-shadow:
+        0 0 15px #ff5d91,
+        0 0 35px rgba(255,93,145,.6);
+}
+
+
+/* TEXT */
+
+.entry-for {
+
+    margin-top: 35px;
+
+    margin-bottom: 4px;
+
+    font-size: 14px;
+
+    color:
+        rgba(255,255,255,.5);
+}
+
+
+.entry-center h1 {
+
+    margin: 0;
+
+    font-size:
+        clamp(55px, 10vw, 90px);
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    color: white;
+
+    text-shadow:
+        0 0 40px
+        rgba(255,80,130,.25);
+}
+
+
+/* LINE */
+
+.entry-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    margin: 20px auto;
+
+    background:
+        #ff5d91;
+}
+
+
+/* SUBTITLE */
+
+.entry-subtitle {
+
+    margin: 0 auto 30px;
+
+    color:
+        rgba(255,255,255,.5);
+
+    font-size: 14px;
+
+    letter-spacing: .3px;
+}
+
+
+/* BUTTON */
+
+#enterSurprise {
+
+    padding:
+        13px 25px;
+
+    border-radius: 40px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+}
+
+
+#enterSurprise:hover {
+
+    background:
+        #ff4f86;
+
+    border-color:
+        #ff4f86;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,79,134,.3);
+}
+
+
+#enterSurprise span {
+
+    margin-left: 8px;
+
+    transition: .25s;
+}
+
+
+#enterSurprise:hover span {
+
+    margin-left: 14px;
+}
+
+
+/* ANIMATION */
+
+@keyframes entryAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes ringPulse {
+
+    0%, 100% {
+
+        transform: scale(1);
+
+        box-shadow:
+            0 0 0
+            rgba(255,93,145,0);
+
+    }
+
+    50% {
+
+        transform: scale(1.06);
+
+        box-shadow:
+            0 0 35px
+            rgba(255,93,145,.15);
+
+    }
+
+}
+

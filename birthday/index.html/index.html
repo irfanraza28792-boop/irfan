@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Rukhsa Sultana ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+      
+
+    <!-- EXTRA ENTRY SCREEN -->
+
+<div id="entryScreen">
+
+    <div class="entry-center">
+
+        <div class="entry-label">
+            A PRIVATE MESSAGE
+        </div>
+
+        <div class="entry-ring">
+            <div class="entry-dot"></div>
+        </div>
+
+        <p class="entry-for">
+            This is for
+        </p>
+
+        <h1>
+            Rukhsa
+        </h1>
+
+        <div class="entry-line"></div>
+
+        <p class="entry-subtitle">
+            Someone left a little surprise for you.
+        </p>
+
+        <button
+            id="enterSurprise"
+            type="button"
+        >
+            Open
+            <span>→</span>
+        </button>
+
+    </div>
+
+</div>
+
+
+    <!-- Floating background -->
+    <div id="backgroundHearts"></div>
+
+    <!-- =========================
+         SLIDE 1
+    ========================== -->
+
+    <section class="slide active" id="slide1">
+
+        <div class="slide-content">
+
+            <div class="top-label">
+                ✦ A LITTLE SURPRISE ✦
+            </div>
+
+            <div class="moon">🌙</div>
+
+            <h4>
+            <p class="small-intro">
+                Special wish by Mr IRFAN
+            </p>
+            <h4>
+
+            <h1>
+                MISS<h1>
+                    <h2>
+                <span>Rukhsa Sultana</span>
+            </h2>
+
+            <p class="description">
+                I could have simply said
+                <b></b>.
+                <br>
+                But you deserve something
+                a little more special.
+            </p>
+
+            <button
+    class="next-btn"
+    id="startButton"
+    type="button"
+>
+    Open my surprise
+    <span>♡</span>
+</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SLIDE 2
+    ========================== -->
+
+    <section class="slide" id="slide2">
+
+        <div class="slide-content">
+
+            <div class="number">
+                02
+            </div>
+
+            <div class="cute-heart">
+                💗
+            </div>
+
+            <h2>
+               
+                <span>STORY</span>
+            </h2>
+
+            <div class="message-card">
+
+                <p>
+                   Woh bas ek ajnabi ladki thi, jo ek train ke safar mein mili thi. Safar chhota tha, baatein bhi zyada nahi hui… phir train apni manzil par pahunchi aur hum dono apni-apni raahon par chale gaye.
+
+Lekin pata nahi kyun, us mulaqat ne dil mein ek chhoti si jagah bana li. Naam yaad tha, toh Instagram par uski ID dhoondi, message kiya… aur shayad wahi se ek khoobsurat kahani shuru hui.
+
+Jo ladki kal tak mere liye bilkul ajnabi thi, aaj meri ek khaas dost ban chuki hai. Kabhi-kabhi zindagi ke sabse khoobsurat rishte planned nahi hote—bas ek train, ek mulaqat aur ek chhota sa message unki wajah ban jaata hai. ❤️
+
+
+                </p>
+
+               
+
+                <div class="tiny-heart">
+                    ♥
+                </div>
+
+            </div>
+
+            <button
+                class="next-btn"
+                onclick="nextSlide()"
+            >
+                There's more ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SLIDE 3
+    ========================== -->
+
+    <section class="slide" id="slide3">
+
+        <div class="slide-content">
+
+            <div class="number">
+                03
+            </div>
+
+            <div class="flower">
+                🌸
+            </div>
+
+            <h2>
+                DEAR
+                
+            </h2>
+
+            <p class="large-message">
+               Na khoon ka rishta, na koi vaada purana hai,
+Phir bhi tu dil ke sabse kareeb, sabse apna hai.
+Duniya mein dost toh bahut mile hain mujhe,
+Magar tere jaisa dost milna… shayad meri kismat ka afsana hai. ❤️
+
+
+            </p>
+
+
+            <p class="large-message">
+                
+            </p>
+
+            <div class="mini-gallery">
+
+                <div>
+                    <img
+                        src="ooo.png"
+                        alt="Memory"
+                    >
+                </div>
+
+                <div>
+                    <img
+                        src="ot.png"
+                        alt="Memory"
+                    >
+                </div>
+
+            </div>
+
+           <button
+    id="surpriseButton"
+    class="next-btn"
+    type="button"
+>
+    One last surprise 🔐
+</button>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SLIDE 4 — LOCKED
+    ========================== -->
+
+    <section class="slide" id="slide4">
+
+        <div class="slide-content">
+
+            <div class="number">
+                04
+            </div>
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+            <h2>
+                PAY
+                <span>SEE</span>
+            </h2>
+
+            <p>
+                I saved the best part for the end.
+            </p>
+
+            <div class="payment-card">
+
+                <div class="payment-top">
+                    SPECIAL ACCESS
+                </div>
+
+                <div class="price">
+                    ₹10
+                </div>
+
+                <div class="payment-text">
+                    Unlock the final birthday surprise
+                </div>
+
+                <button
+    id="payButton"
+    class="pay-btn"
+    onclick="startUPIPayment()"
+>
+    Pay ₹10 with UPI
+    <span>→</span>
+</button>
+
+<div id="upiPanel" class="upi-panel">
+
+    <div class="upi-close" onclick="closeUPIPanel()">
+        ×
+    </div>
+
+    <div class="upi-icon">
+        💳
+    </div>
+
+    <h3>ONLY FEEL ❤️</h3>
+
+    <p>
+        Scan the QR code with any UPI app
+    </p>
+
+    <div class="qr-box" id="upiQRCode"></div>
+
+    <div class="upi-amount">
+        ₹10.00
+    </div>
+
+    <p class="upi-small">
+        After completing the payment,
+        continue to the surprise.
+    </p>
+
+    <button
+        class="unlock-btn"
+        onclick="demoUnlock()"
+    >
+        I've paid ₹10 — Unlock ❤️
+    </button>
+
+</div>
+                <div class="upi-note">
+                    
+                </div>
+
+            </div>
+
+            <p
+                id="paymentStatus"
+                class="payment-status"
+            ></p>
+
+            <button
+                id="demoUnlock"
+                class="demo-btn"
+                onclick="demoUnlock()"
+            >
+                Demo: unlock without payment
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SLIDE 5 — FINAL
+    ========================== -->
+
+    <section class="slide" id="slide5">
+
+        <div class="final-content">
+
+            <div class="firework">
+                ✦　✧　✦
+            </div>
+
+            <p class="final-label">
+                THE SURPRISE IS YOURS
+            </p>
+
+            <h2>
+                HAPPY
+                <span>BIRTHDAY</span>
+            </h2>
+
+        
+
+            <div class="final-photo">
+
+                <img
+                    src="coup.png"alt="Ruksa"
+                >
+
+            </div>
+
+            <div class="final-card">
+
+                <p>
+                    May your smile stay bright,
+                    your heart stay peaceful,
+                    and your life become full
+                    of beautiful moments.
+                </p>
+
+                <p>
+                   Pata nahi future mein zindagi humein kahan le jaayegi, lekin dil se bas itni dua hai—agar meri kahani mein koi humsafar likhi hai, toh woh tum ho. ❤️‍🩹
+
+                </p>
+
+                <strong>
+                    Happy Birthday, My love. ❤️
+                </strong>
+
+            </div>
+
+            <div class="final-hearts">
+                ❤️　💗　❤️
+            </div>
+
+            <button
+                class="again-btn"
+                onclick="restart()"
+            >
+                ↻ See it again
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
