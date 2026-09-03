@@ -1,0 +1,948 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    overflow: hidden;
+    background: #100b10;
+    color: #f7edf1;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.bg {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #39202f 0%,
+            #21141d 35%,
+            #100b10 75%
+        );
+
+    z-index: -2;
+}
+
+
+.glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: 50%;
+    top: 35%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(225, 155, 181, .09),
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    animation: breathing 7s ease-in-out infinite;
+}
+
+
+@keyframes breathing {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.12);
+    }
+}
+
+
+/* =====================================================
+   SLIDER
+===================================================== */
+
+.slider {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+
+.slide {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 25px 80px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity .65s ease,
+        transform .65s ease,
+        visibility .65s ease;
+}
+
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+
+.content {
+    width: min(620px, 94%);
+    text-align: center;
+}
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+.label {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #a9949e;
+
+    margin-bottom: 28px;
+}
+
+
+h1 {
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(55px, 10vw, 90px);
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+}
+
+
+h1 span {
+    color: #dfa0b8;
+}
+
+
+h2 {
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(40px, 8vw, 70px);
+
+    font-weight: 400;
+
+    letter-spacing: -3px;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+.description {
+    margin-top: 25px;
+
+    color: #aa98a1;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   HEART
+===================================================== */
+
+.heart {
+    width: 90px;
+    height: 90px;
+
+    margin:
+        0 auto 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 50px;
+
+    color: #e5a4bd;
+
+    background:
+        rgba(229, 164, 189, .07);
+
+    animation: pulse 3s infinite;
+}
+
+
+@keyframes pulse {
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+    font-family: Arial, sans-serif;
+}
+
+
+.continue {
+    position: relative;
+    z-index: 10;
+
+    margin-top: 35px;
+
+    min-height: 50px;
+
+    padding: 13px 25px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid
+        rgba(229, 164, 189, .35);
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    color: #eadde2;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.continue:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(229, 164, 189, .1);
+}
+
+
+.continue:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   SLIDE 2
+===================================================== */
+
+.statement {
+    text-align: left;
+
+    border-left:
+        1px solid #b47791;
+
+    padding:
+        10px 0 10px 28px;
+}
+
+
+.statement p {
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(22px, 4vw, 31px);
+
+    line-height: 1.55;
+
+    color: #e9dce2;
+
+    margin-bottom: 25px;
+}
+
+
+.statement span {
+    color: #dfa0b8;
+}
+
+
+.statement .small {
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #a999a1;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   SLIDE 3
+===================================================== */
+
+.message {
+    text-align: left;
+
+    border-left:
+        1px solid
+        rgba(223, 160, 184, .35);
+
+    padding-left: 25px;
+}
+
+
+.message p {
+    color: #c5b5bd;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 17px;
+}
+
+
+.message .sorry {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #f1e5ea;
+}
+
+
+.message span {
+    color: #dfa0b8;
+}
+
+
+.message .special {
+    text-align: center;
+
+    margin-top: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    color: #e9dce2;
+}
+
+
+.message strong {
+    color: #dfa0b8;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   SLIDE 4 — STORY
+===================================================== */
+
+.story-slide {
+    align-items: flex-start;
+
+    overflow-y: auto;
+
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+
+.story-content {
+    width: min(650px, 94%);
+
+    text-align: left;
+}
+
+
+.story-content .label {
+    text-align: center;
+}
+
+
+.story-intro {
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(25px, 5vw, 38px);
+
+    line-height: 1.4;
+
+    color: #eee0e6;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+
+.story-text {
+    border-left:
+        1px solid
+        rgba(223, 160, 184, .30);
+
+    padding-left: 25px;
+}
+
+
+.story-text p {
+    color: #bcaab3;
+
+    font-size: 15px;
+
+    line-height: 1.95;
+
+    margin-bottom: 24px;
+}
+
+
+.story-text strong {
+    color: #dfa0b8;
+
+    font-weight: 400;
+}
+
+
+.story-text em {
+    color: #e5d2da;
+
+    font-family: Georgia, serif;
+}
+
+
+.story-text .quote {
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    color: #e5d2da;
+
+    padding-left: 5px;
+}
+
+
+.story-ending {
+    margin-top: 38px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid
+        rgba(223, 160, 184, .18);
+
+    text-align: center;
+}
+
+
+.story-ending p {
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(21px, 4vw, 29px);
+
+    line-height: 1.6;
+
+    color: #e8dce1;
+
+    margin-bottom: 20px;
+}
+
+
+.story-ending p:last-child {
+    margin-bottom: 0;
+}
+
+
+.story-ending span {
+    color: #dfa0b8;
+}
+
+
+.story-continue {
+    display: block;
+
+    margin:
+        35px auto 0;
+}
+
+
+/* STORY SCROLLBAR */
+
+.story-slide::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.story-slide::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.story-slide::-webkit-scrollbar-thumb {
+    background:
+        rgba(223, 160, 184, .25);
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   SLIDE 5 — ACTUAL SORRY
+===================================================== */
+
+.sorry-slide {
+    position: relative;
+}
+
+
+.sorry-word {
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(75px, 15vw, 140px);
+
+    font-weight: 400;
+
+    letter-spacing: -8px;
+
+    line-height: .9;
+
+    color: #f5e8ed;
+
+    animation: sorryAppear 1.2s ease;
+}
+
+
+.sorry-word span {
+    color: #dfa0b8;
+}
+
+
+@keyframes sorryAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(.92)
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+.sorry-message {
+    max-width: 450px;
+
+    margin:
+        30px auto 0;
+
+    color: #a998a1;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+.sorry-message em {
+    color: #d9c1cb;
+
+    font-family: Georgia, serif;
+}
+
+
+.sorry-small {
+    margin-top: 25px;
+
+    color: #806d77;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size: 14px;
+}
+
+
+.sorry-heart {
+    margin-top: 28px;
+
+    color: #dfa0b8;
+
+    font-size: 25px;
+
+    animation: softPulse 2.5s infinite;
+}
+
+
+@keyframes softPulse {
+
+    50% {
+        opacity: .45;
+
+        transform: scale(.9);
+    }
+}
+
+
+/* =====================================================
+   SLIDE 6 — QUESTION
+===================================================== */
+
+.question-sub {
+    color: #a997a0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.answers {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+
+.answer {
+    position: relative;
+    z-index: 10;
+
+    min-width: 140px;
+
+    min-height: 52px;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: .3s ease;
+}
+
+
+.yes {
+    border:
+        1px solid #dfa0b8;
+
+    background: #dfa0b8;
+
+    color: #291820;
+}
+
+
+.no {
+    border:
+        1px solid
+        rgba(255, 255, 255, .15);
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    color: #d5c7ce;
+}
+
+
+.answer:hover {
+    transform: translateY(-4px);
+}
+
+
+.answer:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSE
+===================================================== */
+
+.response {
+    display: none;
+
+    margin:
+        30px auto 0;
+
+    width:
+        min(400px, 100%);
+
+    padding: 25px;
+
+    border-top:
+        1px solid
+        rgba(223, 160, 184, .25);
+
+    animation: appear .5s ease;
+}
+
+
+.response.show {
+    display: block;
+}
+
+
+.response .symbol {
+    font-size: 32px;
+
+    color: #dfa0b8;
+
+    margin-bottom: 10px;
+}
+
+
+.response h3 {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+}
+
+
+.response p {
+    color: #aa98a1;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress {
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 7px;
+
+    z-index: 50;
+}
+
+
+.dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #5d4c55;
+
+    transition: .3s;
+}
+
+
+.dot.active {
+    width: 22px;
+
+    background: #dfa0b8;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .slide {
+        padding:
+            25px 20px 70px;
+    }
+
+
+    .statement {
+        padding-left: 20px;
+    }
+
+
+    .message {
+        padding-left: 18px;
+    }
+
+
+    .message p {
+        font-size: 14px;
+    }
+
+
+    .sorry-word {
+        font-size: 80px;
+
+        letter-spacing: -5px;
+    }
+
+
+    .answers {
+        gap: 10px;
+    }
+
+
+    .answer {
+        min-width: 125px;
+    }
+
+
+    .story-slide {
+        padding-top: 35px;
+        padding-bottom: 90px;
+    }
+
+
+    .story-content {
+        width: 100%;
+    }
+
+
+    .story-text {
+        padding-left: 18px;
+    }
+
+
+    .story-text p {
+        font-size: 14px;
+
+        line-height: 1.9;
+    }
+
+
+    .story-text .quote {
+        font-size: 18px;
+    }
+
+
+    .story-ending p {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+}
