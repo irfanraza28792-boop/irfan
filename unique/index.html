@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One Little Date — Mirana ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NIGHT SKY -->
+    <div class="sky">
+        <div class="stars"></div>
+        <div class="moon"></div>
+    </div>
+
+
+    <!-- ==============================
+         MAIN DATE EXPERIENCE
+    =============================== -->
+
+    <main>
+
+
+        <!-- 1. INVITATION -->
+
+        <section class="slide active" id="slide1">
+
+            <div class="content">
+
+                <div class="small-title">
+                    ONE LITTLE QUESTION
+                </div>
+
+                <h1>
+                    Mirana,
+                    <br>
+                    <em>will you go on a date with me?</em>
+                </h1>
+
+                <p>
+                    Not a restaurant.
+                    Not a long drive.
+                    Not even the same place.
+                    <br><br>
+                    Just you, me and one little evening
+                    together — online. 🌙
+                </p>
+
+                <button class="main-btn" data-next="1">
+                    I'm listening
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 2. YES / NO -->
+
+        <section class="slide" id="slide2">
+
+            <div class="content center">
+
+                <div class="small-title">
+                    BE HONEST
+                </div>
+
+                <h2>
+                    So...
+                    <br>
+                    <em>is that a yes?</em>
+                </h2>
+
+                <p>
+                    Choose carefully. 😌
+                </p>
+
+                <div class="choice-area" id="choiceArea">
+
+                    <button
+                        class="yes-btn"
+                        id="yesBtn">
+                        Yes ♡
+                    </button>
+
+                    <button
+                        class="no-btn"
+                        id="noBtn">
+                        No
+                    </button>
+
+                </div>
+
+                <div class="funny-message" id="funnyMessage"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 3. DATE -->
+
+        <section class="slide" id="slide3">
+
+            <div class="content center">
+
+                <div class="small-title">
+                    STEP 01 · THE DAY
+                </div>
+
+                <h2>
+                    When should we
+                    <br>
+                    <em>have our date?</em>
+                </h2>
+
+                <p>
+                    Pick a day that belongs to us.
+                </p>
+
+                <div class="date-wrapper">
+
+                    <span>♡</span>
+
+                    <input
+                        type="date"
+                        id="dateInput">
+
+                </div>
+
+                <button
+                    class="main-btn disabled"
+                    id="dateNext">
+
+                    Save the date
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 4. TIME -->
+
+        <section class="slide" id="slide4">
+
+            <div class="content center">
+
+                <div class="small-title">
+                    STEP 02 · THE TIME
+                </div>
+
+                <h2>
+                    When should I
+                    <br>
+                    <em>steal your evening?</em>
+                </h2>
+
+                <p>
+                    Pick whichever feels perfect.
+                </p>
+
+                <div class="time-grid">
+
+                    <button data-time="7:00 PM">
+                        <strong>7:00 PM</strong>
+                        <small>early evening</small>
+                    </button>
+
+                    <button data-time="8:00 PM">
+                        <strong>8:00 PM</strong>
+                        <small>nice & relaxed</small>
+                    </button>
+
+                    <button data-time="9:00 PM">
+                        <strong>9:00 PM</strong>
+                        <small>my favourite</small>
+                    </button>
+
+                    <button data-time="10:00 PM">
+                        <strong>10:00 PM</strong>
+                        <small>late night</small>
+                    </button>
+
+                </div>
+
+                <button
+                    class="main-btn disabled"
+                    id="timeNext">
+
+                    Keep this time
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 5. WHERE -->
+
+        <section class="slide" id="slide5">
+
+            <div class="content center">
+
+                <div class="small-title">
+                    STEP 03 · WHERE
+                </div>
+
+                <h2>
+                    Where are we
+                    <br>
+                    <em>meeting?</em>
+                </h2>
+
+                <p>
+                    Same date. Same time.
+                    Different screens.
+                </p>
+
+                <div class="platform-grid">
+
+                    <button data-platform="Instagram Call">
+                        <span>◎</span>
+                        Instagram
+                    </button>
+
+                    <button data-platform="WhatsApp Call">
+                        <span>◉</span>
+                        WhatsApp
+                    </button>
+
+                    <button data-platform="Google Meet">
+                        <span>◇</span>
+                        Google Meet
+                    </button>
+
+                    <button data-platform="Other">
+                        <span>♡</span>
+                        You choose
+                    </button>
+
+                </div>
+
+                <button
+                    class="main-btn disabled"
+                    id="platformNext">
+
+                    That's where we'll meet
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 6. WHAT TO DO -->
+
+        <section class="slide" id="slide6">
+
+            <div class="content center">
+
+                <div class="small-title">
+                    STEP 04 · OUR PLAN
+                </div>
+
+                <h2>
+                    What should we
+                    <br>
+                    <em>do together?</em>
+                </h2>
+
+                <p>
+                    Pick the kind of trouble we're getting into.
+                </p>
+
+                <div class="activity-grid">
+
+                    <button data-activity="Movie Night 🎬">
+                        <span>🎬</span>
+                        <strong>Movie Night</strong>
+                        <small>One movie, two screens.</small>
+                    </button>
+
+                    <button data-activity="Game Night 🎮">
+                        <span>🎮</span>
+                        <strong>Game Night</strong>
+                        <small>Winner gets bragging rights.</small>
+                    </button>
+
+                    <button data-activity="Music & Talking 🎧">
+                        <span>🎧</span>
+                        <strong>Music & Talking</strong>
+                        <small>Just us and random conversations.</small>
+                    </button>
+
+                    <button data-activity="Late Night Talk ☕">
+                        <span>☕</span>
+                        <strong>Late Night Talk</strong>
+                        <small>Probably the longest one.</small>
+                    </button>
+
+                </div>
+
+                <button
+                    class="main-btn disabled"
+                    id="activityNext">
+
+                    I like this plan
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 7. DATE RULES -->
+
+        <section class="slide" id="slide7">
+
+            <div class="content center">
+
+                <div class="small-title">
+                    VERY IMPORTANT
+                </div>
+
+                <h2>
+                    Our date needs
+                    <br>
+                    <em>a few rules.</em>
+                </h2>
+
+                <div class="rules">
+
+                    <div>
+                        <b>01</b>
+                        <span>No awkward “what should we talk about?”</span>
+                    </div>
+
+                    <div>
+                        <b>02</b>
+                        <span>At least one genuinely stupid conversation.</span>
+                    </div>
+
+                    <div>
+                        <b>03</b>
+                        <span>No checking the time every five minutes.</span>
+                    </div>
+
+                    <div>
+                        <b>04</b>
+                        <span>We stay until one of us says “okay, goodnight.”</span>
+                    </div>
+
+                </div>
+
+                <button class="main-btn" data-next="7">
+                    I accept the rules
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 8. FUN QUESTION -->
+
+        <section class="slide" id="slide8">
+
+            <div class="content center">
+
+                <div class="small-title">
+                    ONE LAST DECISION
+                </div>
+
+                <h2>
+                    What are you bringing
+                    <br>
+                    <em>to our date?</em>
+                </h2>
+
+                <p>
+                    Choose one. I want to know.
+                </p>
+
+                <div class="bring-grid">
+
+                    <button data-bring="Your favourite song 🎧">
+                        🎧
+                        <span>A favourite song</span>
+                    </button>
+
+                    <button data-bring="A funny story 😂">
+                        😂
+                        <span>A funny story</span>
+                    </button>
+
+                    <button data-bring="A random secret 🤫">
+                        🤫
+                        <span>A little secret</span>
+                    </button>
+
+                    <button data-bring="Your best smile 😊">
+                        😊
+                        <span>Your best smile</span>
+                    </button>
+
+                </div>
+
+                <div class="ticket-actions">
+
+    <button class="main-btn" id="whatsappBtn">
+        Send our date plan
+        <span>♡</span>
+    </button>
+
+    <button class="secondary-btn" id="ticketNext">
+        There's one more thing
+        <span>→</span>
+    </button>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 9. DATE TICKET -->
+
+        <section class="slide" id="slide9">
+
+            <div class="ticket">
+
+                <div class="ticket-top">
+                    OFFICIAL ONLINE DATE
+                </div>
+
+                <div class="ticket-icon">
+                    ♡
+                </div>
+
+                <h2>
+                    Mirana <span>×</span> Irfan
+                </h2>
+
+                <div class="confirmed">
+                    DATE ACCEPTED
+                </div>
+
+                <div class="ticket-info">
+
+                    <div>
+                        <small>DATE</small>
+                        <strong id="finalDate">—</strong>
+                    </div>
+
+                    <div>
+                        <small>TIME</small>
+                        <strong id="finalTime">—</strong>
+                    </div>
+
+                    <div>
+                        <small>MEETING PLACE</small>
+                        <strong id="finalPlatform">—</strong>
+                    </div>
+
+                    <div>
+                        <small>PLAN</small>
+                        <strong id="finalActivity">—</strong>
+                    </div>
+
+                    <div>
+                        <small>BRING</small>
+                        <strong id="finalBring">—</strong>
+                    </div>
+
+                </div>
+
+                <div class="ticket-footer">
+                    ONE EVENING · TWO SCREENS · ONE LITTLE MEMORY
+                </div>
+
+                <button class="main-btn" id="ticketNext">
+                    There's one more thing
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 10. FINAL -->
+
+        <section class="slide" id="slide10">
+
+            <div class="content center final">
+
+                <div class="small-title">
+                    UNTIL THEN...
+                </div>
+
+                <div class="big-heart">
+                    ♡
+                </div>
+
+                <h2>
+                    I'll see you
+                    <br>
+                    <em>under the same moon.</em>
+                </h2>
+
+                <p>
+                    You on your side of the screen.
+                    <br>
+                    Me on mine.
+                    <br><br>
+                    And somehow,
+                    <br>
+                    we'll make it feel like we're
+                    <em>not that far apart.</em>
+                </p>
+
+                <div class="final-line">
+                    Date with Mirana — officially planned. 🌙
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
